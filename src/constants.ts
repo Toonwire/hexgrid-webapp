@@ -1,7 +1,7 @@
 const LOCAL_STORAGE_PLAYER_NAME = 'playerName';
 const LOCAL_STORAGE_EDITOR_CODE = 'editorCode';
 
-const defaultPlayerName = 'Anonymous';
+const defaultPlayerName = 'My Code';
 const defaultEditorCode = `
 /**
 * id 			string (unique identifier for a hexagon cell)
