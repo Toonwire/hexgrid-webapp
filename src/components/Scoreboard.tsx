@@ -1,16 +1,9 @@
-import { PlayerColor } from '@toonwire/hexgrid-game-engine/constants';
 import '../styles/Scoreboard.css';
+import { PlayerData } from './PlayerStats';
 
 type Column = {
   key: string;
   label: string;
-};
-
-export type PlayerData = {
-  color: PlayerColor;
-  data: {
-    [key: string]: string | number | boolean;
-  };
 };
 
 type ScoreboardProps = {
