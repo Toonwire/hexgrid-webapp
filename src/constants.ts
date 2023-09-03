@@ -1,8 +1,8 @@
-const LOCAL_STORAGE_PLAYER_NAME = 'playerName';
-const LOCAL_STORAGE_EDITOR_CODE = 'editorCode';
+export const LOCAL_STORAGE_PLAYER_NAME = 'playerName';
+export const LOCAL_STORAGE_EDITOR_CODE = 'editorCode';
 
-const defaultPlayerName = 'My Code';
-const defaultEditorCode = `
+export const DEFAULT_PLAYER_NAME = 'My Code';
+export const DEFAULT_EDITOR_CODE = `
 /**
 * id 			string (unique identifier for a hexagon cell)
 * resources		int (amount displayed in hexagon)
@@ -39,7 +39,7 @@ function turn(myCells) {
 	return transaction;
 }`;
 
-const PLAYER_COLORS = [
+export const PLAYER_COLORS = [
   { bg: '#0000A6', fg: '#b2b3ff' },
   { bg: '#63FFAC', fg: '#004a00' },
   { bg: '#B79762', fg: '#1c0000' },
@@ -120,8 +120,6 @@ export default {
   LOCAL_STORAGE_EDITOR_CODE,
   PLAYER_COLORS,
   FONT_FAMILY,
-  defaultPlayerName,
-  defaultEditorCode,
   canvasBackgroundColor,
   HexOwner,
 };

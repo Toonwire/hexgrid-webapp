@@ -3,14 +3,19 @@ import '../styles/PlayerSelect.css';
 import WithSidebar from './Sidebar.js';
 import { Navigate } from 'react-router-dom';
 
-import Constants from '../constants.ts';
-
 import DefaultBot from '@toonwire/hexgrid-game-engine/algorithms/DefaultBot';
 import EasyBot from '@toonwire/hexgrid-game-engine/algorithms/EasyBot';
 import MediumBot from '@toonwire/hexgrid-game-engine/algorithms/MediumBot';
 import CarefulBot from '@toonwire/hexgrid-game-engine/algorithms/CarefulBot';
 import twSupply from '@toonwire/hexgrid-game-engine/algorithms/twSupply';
 import MakeItSafe from '@toonwire/hexgrid-game-engine/algorithms/MakeItSafe';
+import {
+  DEFAULT_EDITOR_CODE,
+  DEFAULT_PLAYER_NAME,
+  LOCAL_STORAGE_EDITOR_CODE,
+  LOCAL_STORAGE_PLAYER_NAME,
+  PLAYER_COLORS,
+} from '../constants.js';
 
 type SelectablePlayer = {
   name: string;
@@ -37,18 +42,8 @@ function getActivePlayers(availablePlayers: SelectablePlayer[]): SelectedPlayer[
 }
 
 function Versus() {
-  // let playerName = props.location.state
-  //   ? props.location.state.playerName
-  //   : localStorage.getItem(Constants.LOCAL_STORAGE_PLAYER_NAME);
-  // if playerName = Constants.defaultPlayerName;
-
-  // let playerCode = props.location.state
-  //   ? props.location.state.playerCode
-  //   : localStorage.getItem(Constants.LOCAL_STORAGE_EDITOR_CODE);
-  // if (!playerCode) playerCode = Constants.defaultEditorCode;
-
-  const playerName = localStorage.getItem(Constants.LOCAL_STORAGE_PLAYER_NAME) || Constants.defaultPlayerName;
-  const playerCode = localStorage.getItem(Constants.LOCAL_STORAGE_EDITOR_CODE) || Constants.defaultEditorCode;
+  const playerName = localStorage.getItem(LOCAL_STORAGE_PLAYER_NAME) || DEFAULT_PLAYER_NAME;
+  const playerCode = localStorage.getItem(LOCAL_STORAGE_EDITOR_CODE) || DEFAULT_EDITOR_CODE;
 
   const players = [
     { name: playerName, codeString: playerCode, count: 1 },
@@ -70,7 +65,7 @@ function Versus() {
   function redirectGame() {
     // minimum of 1 player needed to start a game
     const selectedPlayerCount = availablePlayers.reduce((acc, player) => acc + player.count, 0);
-    if (selectedPlayerCount >= 1 || selectedPlayerCount > Constants.PLAYER_COLORS.length) {
+    if (selectedPlayerCount >= 1 || selectedPlayerCount > PLAYER_COLORS.length) {
       setRedirect('/game');
       // could also set local storage players here
     } else {
