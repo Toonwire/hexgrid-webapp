@@ -38,7 +38,7 @@
   background-color: transparent;
   color: #f2f2f2;
   font-size: 16px;
-  font-family: "Arial";
+  font-family: 'Arial';
   outline: none;
   cursor: default;
 }
@@ -51,28 +51,34 @@
   cursor: pointer;
 }
 
-[contenteditable="true"].interactable {
+.disabled {
+  cursor: default;
+  color: #aaaaaa;
+  font-style: italic;
+}
+
+[contenteditable='true'].interactable {
   cursor: text;
   color: #f2f2f2;
   font-style: normal;
 }
 
-[contenteditable="true"]:empty:before {
+[contenteditable='true']:empty:before {
   content: attr(placeholder);
   color: #aaaaaa;
   font-style: italic;
 }
 
-[contenteditable="true"].single-line br {
+[contenteditable='true'].single-line br {
   display: none;
 }
 
-[contenteditable="true"].single-line * {
+[contenteditable='true'].single-line * {
   display: inline;
   white-space: nowrap;
 }
 
-[contenteditable="true"].single-line {
+[contenteditable='true'].single-line {
   white-space: nowrap;
   overflow: hidden;
 }
