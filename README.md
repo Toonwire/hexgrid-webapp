@@ -8,3 +8,4 @@
 - [ ] include `socket-io-client` dependency
 - [x] route base router '/' to '/editor'
 - [x] replace Vite icons and refs with hex related stuff
+- [ ] create and and page hook for changing document title based on path
