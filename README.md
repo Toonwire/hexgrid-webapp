@@ -6,5 +6,5 @@
 - [x] convert `GameLive.js` to `.tsx`
 - [ ] delete unused `withRouter` and `NavBar`
 - [ ] include `socket-io-client` dependency
-- [ ] route base router '/' to '/editor'
+- [x] route base router '/' to '/editor'
 - [x] replace Vite icons and refs with hex related stuff
