@@ -1,5 +1,4 @@
 import './App.css';
-import './styles/NavBar.css';
 
 import Editor from './components/Editor';
 import DocsRules from './components/DocsRules';

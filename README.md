@@ -4,7 +4,7 @@
 - [ ] show UI warning that max players exceeded in player select
 - [ ] more sidebar items in player select, e.g. "Small setup", "Medium setup", "Large setup" to randomly select players to fit in X rings.
 - [x] convert `GameLive.js` to `.tsx`
-- [ ] delete unused `withRouter` and `NavBar`
+- [x] delete unused `withRouter` and `NavBar`
 - [ ] include `socket-io-client` dependency
 - [x] route base router '/' to '/editor'
 - [x] replace Vite icons and refs with hex related stuff
