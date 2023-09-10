@@ -1,7 +1,9 @@
+import io from 'socket.io-client'; // TODO: include as dependency
+
 import { GameState } from '@toonwire/hexgrid-game-engine/game';
 import Player, { PlayerCell } from '@toonwire/hexgrid-game-engine/player';
 import { PlayerTransaction } from '@toonwire/hexgrid-game-engine/transaction';
-import io from 'socket.io-client'; // TODO: include as dependency
+
 const ENDPOINT = 'http://127.0.0.1:4001';
 const socket = io(ENDPOINT, {
   autoConnect: false,

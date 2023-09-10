@@ -1,3 +1,5 @@
+export const DOCUMENT_BASE_TITLE = 'Hexgrid';
+
 export const LOCAL_STORAGE_PLAYER_NAME = 'playerName';
 export const LOCAL_STORAGE_EDITOR_CODE = 'editorCode';
 
@@ -79,19 +81,12 @@ export const PLAYER_COLORS = [
   { bg: '#00846F', fg: '#a3ffff' },
 ];
 
-const canvasBackgroundColor = '#183b4e';
-const FONT_FAMILY = 'Consolas';
-
 export enum HexgridOrientation {
   FLAT,
   POINTY,
 }
 
 export interface HexagonCenter {
-  x: number;
-  y: number;
-}
-export interface Point2d {
   x: number;
   y: number;
 }
@@ -103,23 +98,3 @@ export interface IHexgridLayout {
   orientation: HexgridOrientation;
   hexRadius: number;
 }
-
-// const HexgridOrientation = {
-//   FLAT: 0,
-//   POINTY: 1,
-// };
-
-const HexOwner = {
-  NONE: 0,
-  OWN: 1,
-  OTHER: 2,
-};
-
-export default {
-  LOCAL_STORAGE_PLAYER_NAME,
-  LOCAL_STORAGE_EDITOR_CODE,
-  PLAYER_COLORS,
-  FONT_FAMILY,
-  canvasBackgroundColor,
-  HexOwner,
-};
