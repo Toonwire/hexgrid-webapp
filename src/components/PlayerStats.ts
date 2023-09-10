@@ -1,5 +1,5 @@
-import Player from '@toonwire/hexgrid-game-engine/player';
 import { PlayerColor } from '@toonwire/hexgrid-game-engine/constants';
+import Player from '@toonwire/hexgrid-game-engine/player';
 
 export type PlayerData = {
   color: PlayerColor;

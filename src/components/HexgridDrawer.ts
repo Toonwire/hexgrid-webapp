@@ -1,5 +1,5 @@
 import { HexOwner } from '@toonwire/hexgrid-game-engine/constants.ts';
-import { IHexgridLayout, HexgridOrientation, Point2d } from '../constants.ts';
+import { HexgridOrientation, IHexgridLayout, Point2d } from '../constants.ts';
 
 import Hexagon from '@toonwire/hexgrid-game-engine/hexagon';
 import Player from '@toonwire/hexgrid-game-engine/player';

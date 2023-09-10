@@ -1,11 +1,11 @@
 import './App.css';
 
-import Editor from './components/Editor';
 import DocsRules from './components/DocsRules';
+import Editor from './components/Editor';
 import GameOffline from './components/GameOffline';
 // import GameLive from './GameLive';
-import PlayerSelect from './components/PlayerSelect';
 import { Link, Navigate } from 'react-router-dom';
+import PlayerSelect from './components/PlayerSelect';
 
 import { Route, Routes } from 'react-router-dom';
 

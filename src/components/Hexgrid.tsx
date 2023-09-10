@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { HexgridOrientation, IHexgridLayout } from '../constants.ts';
 import '../styles/Hexgrid.css';
 import drawHexagons from './HexgridDrawer';
-import { HexgridOrientation, IHexgridLayout } from '../constants.ts';
 
 import Hexagon from '@toonwire/hexgrid-game-engine/hexagon';
 import Player from '@toonwire/hexgrid-game-engine/player';

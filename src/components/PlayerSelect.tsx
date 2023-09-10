@@ -1,14 +1,14 @@
 import { useState, WheelEvent } from 'react';
+import { Navigate } from 'react-router-dom';
 import '../styles/PlayerSelect.css';
 import WithSidebar from './Sidebar.js';
-import { Navigate } from 'react-router-dom';
 
+import CarefulBot from '@toonwire/hexgrid-game-engine/algorithms/CarefulBot';
 import DefaultBot from '@toonwire/hexgrid-game-engine/algorithms/DefaultBot';
 import EasyBot from '@toonwire/hexgrid-game-engine/algorithms/EasyBot';
-import MediumBot from '@toonwire/hexgrid-game-engine/algorithms/MediumBot';
-import CarefulBot from '@toonwire/hexgrid-game-engine/algorithms/CarefulBot';
-import twSupply from '@toonwire/hexgrid-game-engine/algorithms/twSupply';
 import MakeItSafe from '@toonwire/hexgrid-game-engine/algorithms/MakeItSafe';
+import MediumBot from '@toonwire/hexgrid-game-engine/algorithms/MediumBot';
+import twSupply from '@toonwire/hexgrid-game-engine/algorithms/twSupply';
 import {
   DEFAULT_EDITOR_CODE,
   DEFAULT_PLAYER_NAME,

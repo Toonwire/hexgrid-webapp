@@ -2,8 +2,8 @@ import { useState } from 'react';
 import '../styles/DocsRules.css';
 import WithSidebar from './Sidebar';
 
-import Rules from './Rules';
 import Docs from './Docs';
+import Rules from './Rules';
 
 const contents = [
   { name: 'Rules', body: Rules },

@@ -1,20 +1,20 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import '../styles/Game.css';
 import WithSidebar from './Sidebar';
 
 import { HexgridOrientation } from '../constants';
-import Scoreboard from './Scoreboard';
 import { default as HexgridComponent } from './Hexgrid';
 import Loader from './Loader';
 import Modal from './Modal';
+import Scoreboard from './Scoreboard';
 
 import { SelectedPlayer } from './PlayerSelect';
 
+import { HexOwner, PlayerColors } from '@toonwire/hexgrid-game-engine/constants';
 import Game, { GameError, GameState } from '@toonwire/hexgrid-game-engine/game';
 import Player from '@toonwire/hexgrid-game-engine/player';
-import { useLocation } from 'react-router-dom';
 import Transaction, { PlayerTransaction } from '@toonwire/hexgrid-game-engine/transaction';
-import { HexOwner, PlayerColors } from '@toonwire/hexgrid-game-engine/constants';
+import { useLocation } from 'react-router-dom';
 import { getPlayerStats, playerStatColumns } from './PlayerStats';
 
 let game: Game;
