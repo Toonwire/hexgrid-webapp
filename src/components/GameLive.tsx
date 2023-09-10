@@ -1,17 +1,20 @@
-import { GameState } from '@toonwire/hexgrid-game-engine/game';
-import { generateGUID } from '@toonwire/hexgrid-game-engine/guid';
-import Player, { PlayerCell } from '@toonwire/hexgrid-game-engine/player';
 import { useEffect, useState } from 'react';
+
 import { HexgridOrientation, LOCAL_STORAGE_PLAYER_NAME } from '../constants';
 import socketAPI from '../socketAPI';
-import '../styles/Game.css';
-import '../styles/Sidebar.css';
 import { default as HexgridComponent } from './Hexgrid';
 import Loader from './Loader';
 import Modal from './Modal';
 import { getPlayerStats, playerStatColumns } from './PlayerStats';
 import Scoreboard from './Scoreboard';
 import WithSidebar from './Sidebar';
+
+import { GameState } from '@toonwire/hexgrid-game-engine/game';
+import { generateGUID } from '@toonwire/hexgrid-game-engine/guid';
+import Player, { PlayerCell } from '@toonwire/hexgrid-game-engine/player';
+
+import '../styles/Game.css';
+import '../styles/Sidebar.css';
 
 function GameLive() {
   const [hexgridOrientation, setHexgridOrientation] = useState(HexgridOrientation.POINTY);

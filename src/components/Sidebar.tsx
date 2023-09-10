@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { ReactComponent as Logo } from '../assets/hexgrid-logo.svg';
+
 import '../styles/Sidebar.css';
 
 type SidebarProps = {

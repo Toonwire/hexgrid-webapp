@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
+import AceEditor from 'react-ace';
 import { Navigate } from 'react-router-dom';
+
 import '../styles/Editor.css';
 import WithSidebar from './Sidebar';
 
@@ -7,7 +9,7 @@ import { Ace } from 'ace-builds';
 import 'ace-builds/src-noconflict/mode-javascript';
 import 'ace-builds/src-noconflict/theme-monokai';
 import 'ace-builds/src-noconflict/theme-twilight';
-import AceEditor from 'react-ace';
+
 import {
   DEFAULT_EDITOR_CODE,
   DEFAULT_PLAYER_NAME,

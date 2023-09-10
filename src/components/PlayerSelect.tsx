@@ -1,6 +1,6 @@
 import { useState, WheelEvent } from 'react';
 import { Navigate } from 'react-router-dom';
-import '../styles/PlayerSelect.css';
+
 import WithSidebar from './Sidebar.js';
 
 import CarefulBot from '@toonwire/hexgrid-game-engine/algorithms/CarefulBot';
@@ -9,6 +9,7 @@ import EasyBot from '@toonwire/hexgrid-game-engine/algorithms/EasyBot';
 import MakeItSafe from '@toonwire/hexgrid-game-engine/algorithms/MakeItSafe';
 import MediumBot from '@toonwire/hexgrid-game-engine/algorithms/MediumBot';
 import twSupply from '@toonwire/hexgrid-game-engine/algorithms/twSupply';
+
 import {
   DEFAULT_EDITOR_CODE,
   DEFAULT_PLAYER_NAME,
@@ -16,6 +17,8 @@ import {
   LOCAL_STORAGE_PLAYER_NAME,
   PLAYER_COLORS,
 } from '../constants.js';
+
+import '../styles/PlayerSelect.css';
 
 type SelectablePlayer = {
   name: string;

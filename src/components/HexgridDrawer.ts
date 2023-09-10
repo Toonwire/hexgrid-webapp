@@ -1,8 +1,8 @@
 import { HexOwner } from '@toonwire/hexgrid-game-engine/constants.ts';
-import { HexgridOrientation, IHexgridLayout, Point2d } from '../constants.ts';
-
 import Hexagon from '@toonwire/hexgrid-game-engine/hexagon';
 import Player from '@toonwire/hexgrid-game-engine/player';
+
+import { HexgridOrientation, IHexgridLayout } from '../constants.ts';
 
 const CANVAS_BACKGROUND_COLOR = '#242424'; //'#183b4e';
 const FONT_FAMILY = 'Consolas';
@@ -160,6 +160,11 @@ function drawSuperCell(context: CanvasRenderingContext2D, hexDrawable: HexagonDr
 
   // draw
   context.stroke();
+}
+
+interface Point2d {
+  x: number;
+  y: number;
 }
 
 export type HexagonDrawable = {

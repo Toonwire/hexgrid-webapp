@@ -1,5 +1,6 @@
-import '../styles/Scoreboard.css';
 import { PlayerData } from './PlayerStats';
+
+import '../styles/Scoreboard.css';
 
 type Column = {
   key: string;
