@@ -5,3 +5,7 @@
   height: 98%;
   margin: auto;
 }
+
+.game.disabled {
+  opacity: 0.5;
+}

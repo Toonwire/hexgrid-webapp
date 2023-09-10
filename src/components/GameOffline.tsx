@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import { default as HexgridComponent } from './Hexgrid';
 import Loader from './Loader';
@@ -32,13 +32,16 @@ function GameOffline() {
   const location = useLocation();
 
   const newGame = useCallback(() => {
+    let players = [];
     if (!location.state || !location.state.players) {
-      console.error('No players selected');
-      return;
+      console.warn('No players selected');
+      players = [];
+    } else {
+      players = location.state.players;
     }
 
     game = new Game();
-    const selectedPlayers: SelectedPlayer[] = location.state.players;
+    const selectedPlayers: SelectedPlayer[] = players;
 
     selectedPlayers.forEach((player, idx) => {
       let turnFunction = null;
@@ -152,10 +155,19 @@ function GameOffline() {
       sidebarElements={gameSidebarElements}
       content={
         gameState ? (
-          <div className="game" onClick={winner ? () => setWinner(null) : () => {}}>
-            {game && game.idToPlayer && (
-              <Scoreboard rows={getPlayerStats(Array.from(game.idToPlayer.values()))} columns={playerStatColumns} />
-            )}
+          <div
+            className={'game ' + (gameState.players.size < 1 ? 'disabled' : '')}
+            onClick={winner ? () => setWinner(null) : () => {}}
+          >
+            <Scoreboard
+              rows={getPlayerStats(Array.from(gameState.players.values()))}
+              columns={playerStatColumns}
+              noRowsElem={
+                <p style={{ color: 'red' }}>
+                  No players selected. Select some from <Link to={'/versus'}>Player Selection</Link>
+                </p>
+              }
+            />
             <HexgridComponent
               hexagons={gameState.hexagons}
               playerIdMap={gameState.players}

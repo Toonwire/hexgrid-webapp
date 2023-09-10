@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 
 import DocsRules from './components/DocsRules';
@@ -6,7 +7,6 @@ import GameOffline from './components/GameOffline';
 import Editor from './components/Editor';
 import PlayerSelect from './components/PlayerSelect';
 
-import { useEffect } from 'react';
 import './App.css';
 
 const navItems = [

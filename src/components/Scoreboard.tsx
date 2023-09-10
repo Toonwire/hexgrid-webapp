@@ -10,11 +10,20 @@ type Column = {
 type ScoreboardProps = {
   rows: PlayerData[];
   columns: Column[];
+  noRowsElem?: React.ReactNode;
 };
 
-function Scoreboard({ rows, columns }: ScoreboardProps) {
+function Scoreboard({ rows, columns, noRowsElem }: ScoreboardProps) {
   if (rows.length === 0) {
-    return <table></table>;
+    return (
+      <table>
+        <thead>
+          <tr>
+            <th>{noRowsElem ? noRowsElem : 'No rows to display.'}</th>
+          </tr>
+        </thead>
+      </table>
+    );
   }
 
   return (
