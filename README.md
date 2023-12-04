@@ -11,3 +11,4 @@
 - [x] create and use page hook for changing document title based on path
 - [x] visiting /game should not be loading if "No players selected" --> Show grid with overlay of navigating to player select page
 - [ ] make modal dynamically adjust width to match parent (fixed position)
+- [ ] new rule! - when taking over a cell, add a grace period of X rounds where no foreign owners can transfer resources to it
